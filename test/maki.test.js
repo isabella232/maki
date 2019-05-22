@@ -3,11 +3,17 @@ const test = require('tape');
 const path = require('path');
 const pify = require('pify');
 const xml2js = require('xml2js');
+const maki = require('../');
 const makiLayoutAll = require('../layouts/all');
 const { generateIconFromSvg, validate } = require('@mapbox/style-components');
 
 const parseString = xml2js.parseString;
 const svgPath = path.join(__dirname, '../icons/');
+
+test('index', function(t) {
+  t.deepEqual(makiLayoutAll.all, maki.layouts.all, 'exports layout.all');
+  t.end();
+});
 
 test('all.json layout ', function(t) {
   fs.readdir(svgPath, function(err, files) {
