@@ -11,7 +11,7 @@ const parseString = xml2js.parseString;
 const svgPath = path.join(__dirname, '../icons/');
 
 test('index', function(t) {
-  t.deepEqual(makiLayoutAll.all, maki.layouts.all, 'exports layout.all');
+  t.deepEqual(makiLayoutAll, maki.layouts, 'exports layout');
   t.end();
 });
 
@@ -32,7 +32,7 @@ test('all.json layout ', function(t) {
       .map(function(file) {
         return file.split('-11.svg')[0];
       });
-    t.deepEqual(filtered, makiLayoutAll.all, 'includes all icons');
+    t.deepEqual(filtered, makiLayoutAll, 'includes all icons');
     t.end();
   });
 });
