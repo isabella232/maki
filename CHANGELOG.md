@@ -1,5 +1,22 @@
 ## Changelog
 
+## v6.3.0
+  - New Oil Rig icon
+
+## v6.2.0
+  - Switch to the @elastic/spritezero library
+
+## v6.1.1
+  - Remove unnecessary import (fix for IE)
+
+## v6.1.0
+  - Generate icons with signed distance fields
+  ### New icons
+    - Arrow
+    - Boat
+    - Car top view
+
+
 ## v6.0.0
 
 - (breaking) rename the following icons:
